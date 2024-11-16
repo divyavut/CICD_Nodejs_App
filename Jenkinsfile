@@ -13,7 +13,7 @@ pipeline {
             steps {
                 script {
                     // Checkout code from GitHub repository
-                    git https://github.com/divyavut/CICD_Nodejs_App.git
+                    git 'https://github.com/divyavut/CICD_Nodejs_App.git'
                 }
             }
         }
