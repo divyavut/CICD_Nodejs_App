@@ -12,11 +12,10 @@ pipeline {
         stage('Checkout') {
             steps {
                 script {
-                    // Checkout code from GitHub repository
-                    script {
+                   
                     // Checkout code from GitHub repository using credentials
                     git credentialsId: 'github-integration', url: 'https://github.com/divyavut/CICD_Nodejs_App.git'
-                }
+        
                 }
             }
         }
