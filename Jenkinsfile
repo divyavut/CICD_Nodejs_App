@@ -64,7 +64,7 @@ pipeline {
             cleanWs()  // Clean up workspace after the pipeline runs
         }
         success {
-            echo 'Pipeline completed successfully!, wonderfull, supperb'
+            echo 'Pipeline completed successfully!, wonderfull'
         }
         failure {
             echo 'Pipeline failed. Please check the logs for details.'
