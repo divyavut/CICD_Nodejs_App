@@ -2,7 +2,6 @@ pipeline {
     agent any
 
     environment {
-        GIT_CREDENTIALS = credentials('github-integration') // GitHub credentials
         AWS_REGION = 'us-east-1'  // Your AWS region
         ECR_REPOSITORY = '461997657539.dkr.ecr.us-east-1.amazonaws.com/nodejs-app' // ECR repository name
         // EKS_CLUSTER_NAME = 'expense'  // EKS cluster name
@@ -14,7 +13,7 @@ pipeline {
             steps {
                 script {
                     // Checkout code from GitHub repository
-                    git url: 'https://github.com/divyavut/CICD_Nodejs_App.git', credentialsId: "${GIT_CREDENTIALS}"
+                    git clone https://github.com/divyavut/CICD_Nodejs_App.git
                 }
             }
         }
