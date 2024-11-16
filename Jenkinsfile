@@ -14,7 +14,7 @@ pipeline {
                 script {
                    
                     // Checkout code from GitHub repository using credentials
-                    git credentialsId: 'github', url: 'https://github.com/divyavut/CICD_Nodejs_App.git'
+                    git credentialsId: 'github-integration', url: 'https://github.com/divyavut/CICD_Nodejs_App.git', branch: 'main'
         
                 }
             }
