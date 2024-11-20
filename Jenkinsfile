@@ -1,6 +1,8 @@
 pipeline {
     agent any
-
+     tools {
+        nodejs 'NodeJS'  // Ensure 'NodeJS' matches the name in Global Tool Configuration
+    }
     environment {
         AWS_REGION = 'us-east-1'  // Your AWS region
         ECR_REPOSITORY = '461997657539.dkr.ecr.us-east-1.amazonaws.com/nodejs-app' // ECR repository name
