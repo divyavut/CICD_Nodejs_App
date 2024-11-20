@@ -2,7 +2,7 @@ pipeline {
     agent any
      tools {
         nodejs 'nodejs'  // Ensure 'NodeJS' matches the name in Global Tool Configuration
-        npm install -g npm@latest npx@latest
+        npm install -g npm 
     }
     environment {
         AWS_REGION = 'us-east-1'  // Your AWS region
