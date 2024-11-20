@@ -17,7 +17,10 @@ FROM node:14
 
 WORKDIR /app
 
-# Copy installed dependencies from the build stage
+# Copy only node_modules from the build stage (avoiding unnecessary files)
+COPY --from=build /app/node_modules /app/node_modules
+
+# Copy the rest of the application code
 COPY --from=build /app /app
 
 EXPOSE 3000
